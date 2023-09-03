@@ -4,6 +4,7 @@
   --primary-brand: #4d5ae5;
   --acsent: #e7e9fc;
   --light: #f4f4fd;
+  --light-slate: #8e8f99;
   --dark: #2e2f42;
   --pressed-state: #404bbf;
   --white: #fff;
@@ -253,6 +254,7 @@ img {
 .our-team {
   background-color: var(--light);
   padding: 120px 0;
+  margin-bottom: 120px;
 }
 .our-team-head {
   display: block;
@@ -306,6 +308,37 @@ img {
 .our-team-text {
   text-align: center;
 }
+/* Customers */
+
+.customers {
+  margin-bottom: 120px;
+}
+.customers-head {
+  margin-bottom: 72px;
+}
+.customers-block {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.customers-item {
+  position: relative;
+  width: 168px;
+  height: 88px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid var(--light-slate);
+}
+.customers-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 /* Portfolio Page 2 */
 .portfolio {
   padding-top: 96px;
