@@ -162,17 +162,22 @@ img {
 
 /* Studio - Section 1*/
 .studio {
-  background-color: var(--dark);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 1440рх;
   min-height: 600px;
+  background-position: center;
   align-items: center;
   margin-bottom: 120px;
   padding: 188px 0;
 }
 .studio-container {
   display: block;
+  align-items: center;
 }
 .studio-head-one {
-  margin-bottom: 48px;
+  margin: 48px auto;
   max-width: 496px;
 }
 /* buttons */
@@ -215,8 +220,15 @@ img {
 .who-we-are_item {
   width: calc(100% - 3 * 24px);
 }
+.who-we-are-thumb {
+  background-color: var(--light);
+  padding: 24px 100px;
+}
 .who-we-are-head {
   margin-bottom: 8px;
+}
+.who-we-are-text {
+  line-height: 24px; /* 150% */
 }
 /*what we are doing  Section 3*/
 .our-work {
@@ -252,7 +264,13 @@ img {
   gap: 24px;
 }
 .our-team-box {
-  padding: 32px 0;
+  display: flex;
+  width: 232px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: auto;
 }
 .our-team-item {
   border-radius: 0px 0px 4px 4px;
@@ -260,13 +278,32 @@ img {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+.our-team_icons-pack {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.our-team_icons-back {
+  position: relative;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-brand);
+  margin-bottom: 32px;
+}
+.triling-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  fill: var(--light);
+}
 .our-team_s-head {
-  display: block;
+  margin-top: 32px;
   margin-bottom: 8px;
   text-align: center;
 }
 .our-team-text {
-  margin-bottom: 32px;
   text-align: center;
 }
 /* Portfolio Page 2 */
