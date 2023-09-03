@@ -165,7 +165,7 @@ img {
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office-1.jpg);
   background-repeat: no-repeat;
-  background-size: 1440рх;
+  background-size: cover;
   min-height: 600px;
   background-position: center;
   align-items: center;
