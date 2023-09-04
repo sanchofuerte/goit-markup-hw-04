@@ -32,7 +32,7 @@
               <a class="link nav-link" href="./index.html" target="_self">Studio</a>
             </li>
             <li class="item header-item">
-              <a class="link nav-link" href="./portfolio.html" target="_self">Portfolio</a>
+              <a class="link current portfolio" href="./portfolio.html" target="_self">Portfolio</a>
             </li>
             <li class="item header-item">
               <a class="link nav-link" href="">Contacts</a>
@@ -75,7 +75,11 @@
           <ul class="list portfolio-card">
             <li class="item portfolio-item">
               <a class="link portfolio-link" href="">
-                <img src="./images/Project_Card1.jpg" alt="photo" width="360" height="300" />
+                
+                <div class="portfolio-img">
+                  <img class="portfolio-img" src="./images/Project_Card1.jpg" alt="photo" width="360" height="300" />
+                  <p class="hidden-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
+                </div>
                 <div class="portfolio-card-border">
                   <h2 class="head-two-portfolio">Banking App Interface Concept</h2>
                   <p>App</p>
@@ -160,12 +164,42 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <a class="logo link" href="./index.html">Web<span class="partlogo-footer">Studio</span> </a>
-        <p class="footer-text">
-          Increase the flow of customers and sales for your business with digital marketing & growth
-          solutions.
-        </p>
-      </div>
+        <div class= "footer-container">
+          
+        <div class="logo-container">
+          <a class="link footer-logo" href="./index.html"
+            >Web<span class="partlogo-footer">Studio</span>
+          </a>
+          <p class="footer-text">
+            Increase the flow of customers and sales for your business with digital marketing & growth
+            solutions.
+          </p>
+        </div>
+        <div class="footer-social-media">
+          <p class="footer-text">Social media</p>
+          <div class="footer_icons-pack">
+            <div class="footer_icons-back">
+              <svg class="footer-triling-icon" width="24" height="24">
+                <use href="./images/images.svg#icon-instagram-1"></use>
+              </svg>
+            </div>
+            <div class="footer_icons-back">
+              <svg class="footer-triling-icon" width="24" height="24">
+                <use href="./images/images.svg#icon-twitter-1"></use>
+              </svg>
+            </div>
+            <div class="footer_icons-back">
+              <svg class="footer-triling-icon" width="24" height="24">
+                <use href="./images/images.svg#icon-facebook-1"></use>
+              </svg>
+            </div>
+            <div class="footer_icons-back">
+              <svg class="footer-triling-icon" width="24" height="24">
+                <use href="./images/images.svg#icon-linkedin-1"></use>
+              </svg>
+            </div>
+          </div>
+          </div>
     </footer>
   </body>
 </html>
