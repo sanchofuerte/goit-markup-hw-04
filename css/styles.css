@@ -214,6 +214,7 @@ img {
 .buttonstyle {
   cursor: pointer;
 }
+
 .studio-button {
   box-shadow: none;
   background-color: var(--primary-brand);
@@ -232,16 +233,90 @@ img {
   min-width: 169px;
   height: 56px;
   border: none;
-  transition-property: background-color box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--pressed-state) box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
+
 .studio-button:hover,
 .studio-button:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: var(--pressed-state);
 }
 
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* right: 0;
+  bottom: 0; */
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(46, 47, 66, 0.4);
+
+  opacity: 1;
+  visibility: visible;
+
+  transition: opacity 250ms ease-out, visibility 250ms ease-out;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 500ms;
+}
+.modal {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+
+  width: 408px;
+  height: 584px;
+  flex-shrink: 0;
+
+  border-radius: 4px;
+  background: #fcfcfc;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.backdrop.is-hidden .modal {
+  transform: scale(0.2);
+  opacity: 0;
+}
+.modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.backdrop-svg-back {
+  position: absolute;
+  border-width: 1px;
+  border-radius: 50%;
+  border-color: black;
+  width: 24px;
+  height: 24px;
+  background-color: var(--light);
+}
+.modal-btn-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
 /* who we are - Section 2 */
 .who-we-are {
   margin-bottom: 120px;
@@ -442,30 +517,29 @@ img {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
+.portfolio-link:hover .hidden-text,
+.portfolio-link:focus .hidden-text {
+  transform: translateY(0%);
+}
 .portfolio-img {
   position: relative;
+  overflow: hidden;
 }
-.portfolio-img:hover .hidden-text {
-  transition-duration: 2500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0.8;
-  top: 0;
-  height: 300px;
-}
-
 .hidden-text {
-  top: 300px;
+  top: 0;
   position: absolute;
-  width: 360px;
-  height: 0;
+  width: 100%;
+  height: 100%;
   padding: 40px 32px 164px;
   position: absolute;
-  opacity: 0;
   background-color: var(--primary-brand);
   color: var(--light);
-  transition-property: opacity top height;
-  line-height: 24px;
+  transform: translateY(100%);
+  line-height: 1.5;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .portfolio-link {
   padding: 24px 0;
 }
@@ -526,6 +600,11 @@ img {
   width: 40px;
   height: 40px;
   background-color: var(--primary-brand);
+  transition: background-color #31d0aa cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer_icons-back:hover,
+.footer_icons-back:focus {
+  background-color: #31d0aa;
 }
 .footer-triling-icon {
   position: absolute;

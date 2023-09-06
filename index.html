@@ -55,7 +55,18 @@
       <section class="studio studio-container">
         <div class="container studio-container">
           <h1 class="head-one studio-head-one">Effective Solutions for Your Business</h1>
-          <button class="buttonstyle studio-button" type="button"> Order Service </button>
+          <button class="buttonstyle studio-button" type="button" data-modal-open> Order Service </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="modal-btn" type="button" data-modal-close>
+                <div class="backdrop-svg-back">
+                  <svg class="modal-btn-icon" width="8" height="8">
+                    <use href="./images/images.svg#icon-close-black"></use>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="who-we-are">
@@ -346,4 +357,5 @@
           </div>
     </footer>
   </body>
+  <script src="./js/modal.js" type="module"></script>
 </html>
