@@ -654,7 +654,7 @@ img {
 .backdrop.is-hidden .modal {
   transform: scale(0.2);
 }
-. .modal-btn {
+.modal-btn {
   position: absolute;
 
   display: flex;
