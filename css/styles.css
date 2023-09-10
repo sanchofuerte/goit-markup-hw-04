@@ -242,8 +242,7 @@ img {
   letter-spacing: 0.04em;
 
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio-button:hover,
@@ -415,6 +414,9 @@ img {
   border-radius: 4px;
   border: 1px solid var(--light-slate);
   padding: 16px 32px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
@@ -458,7 +460,7 @@ img {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -487,8 +489,7 @@ img {
 }
 .portfolio-link {
   display: block;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
@@ -513,8 +514,9 @@ img {
 
   background-color: var(--primary-brand);
   color: var(--light);
-  padding: 40px 32px 164px;
+  padding: 40px 32px;
   line-height: 1.5;
+  letter-spacing: 0.02em;
 
   transform: translateY(100%);
 
@@ -641,8 +643,6 @@ img {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 
-  transform: translate(-50%, -50%) scale(1);
-
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
@@ -670,14 +670,16 @@ img {
   cursor: pointer;
   padding: 0;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-btn:hover,
-.modal-btn:focus {
-  background-color: var(--pressed-state);
+.modal-btn-icon:hover,
+.modal-btn-icon:focus {
+  fill: var(--white);
   border: none;
 }
+
 .modal-btn-icon {
   display: block;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
