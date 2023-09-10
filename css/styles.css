@@ -678,16 +678,16 @@ img {
 }
 
 .modal-btn:hover,
+.modal-btn:focus,
+.modal-btn:hover .modal-btn-icon,
 .modal-btn:focus .modal-btn-icon {
   border: none;
   background-color: var(--pressed-state);
+
+  fill: var(--white);
 }
 
 .modal-btn-icon {
   display: block;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-btn-icon:hover,
-.modal-btn-icon:hover {
-  fill: var(--white);
 }
